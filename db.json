@@ -1,24 +1,32 @@
 {
-    "places": [
-        {
-            "id": 1,
-            "location": "France",
-            "city": "Paris"
-        },
-        {
-            "id": 2,
-            "location": "Spain",
-            "city": "Barcelona"
-        },
-        {
-            "id": 3,
-            "location": "Greece",
-            "city": "Mykonos"
-        },
-        {
-            "id": 4,
-            "location": "Italy",
-            "city": "Rome"
-        }
-    ]
+  "places": [
+    {
+      "id": 1,
+      "location": "France",
+      "city": "Paris"
+    },
+    {
+      "id": 2,
+      "location": "Spain",
+      "city": "Barcelona"
+    },
+    {
+      "id": 3,
+      "location": "Greece",
+      "city": "Mykonos"
+    },
+    {
+      "id": 4,
+      "location": "Italy",
+      "city": "Rome"
+    },
+    {
+      "id": 5
+    },
+    {
+      "location": "England",
+      "city": "London",
+      "id": 6
+    }
+  ]
 }

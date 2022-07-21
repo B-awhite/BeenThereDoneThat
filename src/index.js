@@ -5,6 +5,27 @@ window.addEventListener("DOMContentLoaded", () => {
     addCreateForm()
 })
 
+function addPlace(event) {
+    event.preventDefault()
+    const locationInput = event.target.children[0]
+    const cityInput = event.target.children[1]
+    fetch("http://localhost:3000/places", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            location: locationInput.value,
+            city: cityInput.value
+        })
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)
+    })
+}
+
 function fetchPlaces() {
     fetch("http://localhost:3000/places")
     .then(resp => resp.json())
@@ -36,10 +57,4 @@ function addCreateForm() {
     formContainer.append(form)
 
     form.addEventListener("submit", addPlace)
-}
-
-function addPlace(event) {
-    event.preventDefault()
-    const placeInput = event.target.children[0]
-    const cityInput = event.target.children[1]
 }
