@@ -38,12 +38,14 @@ function fetchPlaces() {
 }
 
 function addPlaceEvents() {
-    const places = document.querySelector("#places-container")
-    places.addEventListener("click", deletePlace)
+    const places = document.querySelectorAll(".place-delete-button")
+    places.forEach(pl => pl.addEventListener("click", deletePlace))
+    // places.addEventListener("mouseover", moveOver)
+    // places.addEventListener("mouseleave", leave)
 }
 
 function deletePlace(e) {
-    console.log(e.target.parentElement.id)
+    e.target.parentElement.id
     fetch(`http://localhost:3000/places/${e.target.parentElement.id}`, {
         method: "DELETE",
         headers: {
@@ -54,6 +56,12 @@ function deletePlace(e) {
     const placeNode = e.target.parentElement.parentElement
     document.querySelector("#places-container").removeChild(placeNode)
 }
+
+// function addHighlightEvent() {
+//     const places = document.querySelector("#places-container")
+//     places.addEventListener("mouseover", moveOver)
+//     places.addEventListener("mouseleave", leave)
+// }
 
 function showPlaces(places) {
     return places.map(place => showOnePlace(place)).join("")
