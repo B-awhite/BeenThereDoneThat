@@ -5,10 +5,10 @@ window.addEventListener("DOMContentLoaded", () => {
     addCreateForm()
 })
 
-function addPlace(event) {
-    event.preventDefault()
-    const locationInput = event.target.children[0]
-    const cityInput = event.target.children[1]
+function addPlace(e) {
+    e.preventDefault()
+    const locationInput = e.target.children[0]
+    const cityInput = e.target.children[1]
     fetch("http://localhost:3000/places", {
         method: "POST",
         headers: {
@@ -33,7 +33,26 @@ function fetchPlaces() {
         console.log(data)
         const places = document.querySelector("#places-container")
         places.innerHTML = showPlaces(data)
+        addPlaceEvents()
     })
+}
+
+function addPlaceEvents() {
+    const places = document.querySelector("#places-container")
+    places.addEventListener("click", deletePlace)
+}
+
+function deletePlace(e) {
+    console.log(e.target.parentElement.id)
+    fetch(`http://localhost:3000/places/${e.target.parentElement.id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    })
+    const placeNode = e.target.parentElement
+    document.querySelector("#places-container").removeChild(placeNode)
 }
 
 function showPlaces(places) {
@@ -43,9 +62,12 @@ function showPlaces(places) {
 function showOnePlace(place) {
     return `
       <div class="place-card" id="${place.id}">
-         <div class="place-frame">
+         <div class="place-frame" id="${place.id}">
             <h4 class="center-text">${place.location}, ${place.city}</h4>
+            <button data-action="delete" class="place-delete-button">X</button>
          </div>
+         <br>
+         <br>
       </div>
       `
 }

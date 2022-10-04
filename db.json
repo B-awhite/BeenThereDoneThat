@@ -21,12 +21,14 @@
       "city": "Rome"
     },
     {
-      "id": 5
-    },
-    {
       "location": "England",
       "city": "London",
       "id": 6
+    },
+    {
+      "location": "Ireland",
+      "city": "Dublin",
+      "id": 7
     }
   ]
 }
