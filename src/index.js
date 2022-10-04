@@ -51,7 +51,7 @@ function deletePlace(e) {
             "Accept": "application/json"
         }
     })
-    const placeNode = e.target.parentElement
+    const placeNode = e.target.parentElement.parentElement
     document.querySelector("#places-container").removeChild(placeNode)
 }
 

@@ -11,11 +11,6 @@
       "city": "Barcelona"
     },
     {
-      "id": 3,
-      "location": "Greece",
-      "city": "Mykonos"
-    },
-    {
       "id": 4,
       "location": "Italy",
       "city": "Rome"
@@ -29,6 +24,11 @@
       "location": "Ireland",
       "city": "Dublin",
       "id": 7
+    },
+    {
+      "location": "Greece",
+      "city": "Mykonos",
+      "id": 8
     }
   ]
 }
