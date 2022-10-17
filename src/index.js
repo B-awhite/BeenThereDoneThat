@@ -57,23 +57,6 @@ function deletePlace(e) {
     document.querySelector("#places-container").removeChild(placeNode)
 }
 
-// function addHighlightEvent() {
-//     places = document.getElementsByClassName("place-delete-button")
-//     places.addEventListener("mouseover", moveOver);
-//     places.addEventListener("mouseleave", leave)
-// }
-
-// function moveOver() {
-//     const places = document.querySelectorAll(".place-delete-button")
-//     places.button.backgroundColor = "red"   
-// }
-
-// function leave() {
-//     const places = document.querySelectorAll(".place-delete-button")
-//     places.button.backgroundColor = "white"
-    
-// }
-
 function showPlaces(places) {
     return places.map(place => showOnePlace(place)).join("")
 }
