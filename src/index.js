@@ -40,8 +40,8 @@ function fetchPlaces() {
 function addPlaceEvents() {
     const places = document.querySelectorAll(".place-delete-button")
     places.forEach(pl => pl.addEventListener("click", deletePlace))
-    // places.addEventListener("mouseover", moveOver)
-    // places.addEventListener("mouseleave", leave)
+    // places.forEach(pl => pl.addEventListener("mouseover", moveOver))
+    // places.forEach(pl => pl.addEventListener("mouseleave", leave))
 }
 
 function deletePlace(e) {
@@ -58,9 +58,20 @@ function deletePlace(e) {
 }
 
 // function addHighlightEvent() {
-//     const places = document.querySelector("#places-container")
-//     places.addEventListener("mouseover", moveOver)
+//     places = document.getElementsByClassName("place-delete-button")
+//     places.addEventListener("mouseover", moveOver);
 //     places.addEventListener("mouseleave", leave)
+// }
+
+// function moveOver() {
+//     const places = document.querySelectorAll(".place-delete-button")
+//     places.button.backgroundColor = "red"   
+// }
+
+// function leave() {
+//     const places = document.querySelectorAll(".place-delete-button")
+//     places.button.backgroundColor = "white"
+    
 // }
 
 function showPlaces(places) {
