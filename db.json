@@ -3,32 +3,44 @@
     {
       "id": 1,
       "location": "France",
-      "city": "Paris"
+      "city": "Paris",
+      "img": "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateParis_Heroshutterstock_112137761.jpg"
     },
     {
       "id": 2,
       "location": "Spain",
-      "city": "Barcelona"
+      "city": "Barcelona",
+      "img": "https://i.natgeofe.com/k/e800ca90-2b5b-4dad-b4d7-b67a48c96c91/spain-madrid.jpg?w=636&h=358"
     },
     {
       "id": 3,
       "location": "Greece",
-      "city": "Mykonos"
+      "city": "Mykonos",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddmA7DXmXi8Mdzog0RoWRXIloW9SEeNqzBg&usqp=CAU"
     },
     {
       "id": 4,
       "location": "Italy",
-      "city": "Rome"
-    },
-    {
-      "location": "England",
-      "city": "London",
-      "id": 6
+      "city": "Rome",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfuoGjuFuC8oR-3gPJck2uhe5JQBEZJx7PPQ&usqp=CAU"
     },
     {
       "location": "Ireland",
       "city": "Dublin",
-      "id": 7
+      "id": 7,
+      "img": "https://images.ireland.com/media/Images/Tipperary/aafe8401d6a1418cb65e2767f330c94b.jpg?w=1934"
+    },
+    {
+      "location": "Jamaica",
+      "city": "Kingston",
+      "img": "https://a.cdn-hotels.com/gdcs/production172/d616/a2baaf16-9325-4e9f-9533-1a334596e0ae.jpg",
+      "id": 8
+    },
+    {
+      "location": "Hawaii",
+      "city": "Maui",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vKnVbmw26RzNCGDzn-7dojkOuZeD24l2cQ&usqp=CAU",
+      "id": 9
     }
   ]
 }
